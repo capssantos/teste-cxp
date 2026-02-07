@@ -11,7 +11,6 @@ class Pipefy(object):
     """ Integration class with Pipefy rest api. """
 
     def __init__(self):
-        """ altered by: silvio.angelo@accenture.com  """
         pipefy_credencials = json.loads(os.getenv('PIPEFY_TOKEN'))
         self.qtdTentativasReconexao = int(os.environ.get('PFY_QTD_TENTATIVAS_RECONEXAO'))
         self.timeoutConexao = int(os.environ.get('PFY_TIMEOUT_CONEXAO'))
@@ -90,7 +89,6 @@ class Pipefy(object):
         print(f'FIM Recuperando Autenticação JWT Pipefy')
 
     def request(self, query, headers={}):
-        """ altered by: silvio.angelo@accenture.com  """
         print(f"query: {query}")
 
         for i in range(self.qtdTentativasReconexao):
