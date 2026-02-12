@@ -10,6 +10,8 @@ import requests
 from app.service.pipefy import Pipefy
 from app.exception.exception import RegraNegocioException
 
+from dotenv import load_dotenv
+load_dotenv()
 
 pipefy = Pipefy()
 ZIP_URL = "https://dados.cvm.gov.br/dados/FI/CAD/DADOS/registro_fundo_classe.zip"
